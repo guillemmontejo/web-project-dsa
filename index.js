@@ -13,10 +13,8 @@ $(document).ready(function(){
 
     console.log(myJSON);
     $.ajax({
-      accepts: {
-        mycustomtype: 'text/html,application/xhtml+xml,application/json,application/xml;q=0.9,image/webp,/;q=0.8'
-      },
       type: 'POST',
+      headers: {"Access-Control-Allow-Origin": "*"},
       url: 'http://147.83.7.208:8080/dsaApp/Authentication/Login',
       dataType: 'json',
       data: myJSON,
